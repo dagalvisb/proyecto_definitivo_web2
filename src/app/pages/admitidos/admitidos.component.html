@@ -1,1 +1,94 @@
-<p>admitidos works!</p>
+<div class="container mt-5">
+  <div class="row justify-content-center">
+    <div class="col-md-8">
+      <div class="card shadow-lg p-4 rounded-3">
+        <header class="mb-4 text-center">
+          <h1 class="mb-1">Formulario de Admición</h1>
+          <span class="text-primary fw-bold">Strimgard</span>
+        </header>
+
+        <form [formGroup]="admisionForm" (ngSubmit)="onSubmit()">
+          
+          <section class="mb-3">
+            <h4 class="border-bottom pb-2">Datos personales</h4>
+          </section>
+
+          <div class="mb-3">
+            <label for="nombre" class="form-label">Nombre y apellidos</label>
+            <input type="text" id="nombre" class="form-control" formControlName="nombre" />
+            <div *ngIf="admisionForm.get('nombre')?.invalid && admisionForm.get('nombre')?.touched" class="text-danger small">
+              El nombre es obligatorio.
+            </div>
+          </div>
+
+          <div class="mb-3">
+            <label for="lugarNacimiento" class="form-label">Lugar y fecha de nacimiento</label>
+            <input type="text" id="lugarNacimiento" class="form-control" formControlName="lugarNacimiento" />
+          </div>
+
+          <div class="row mb-3">
+            <div class="col-md-6">
+              <label for="dni" class="form-label">DNI</label>
+              <input type="text" id="dni" class="form-control" formControlName="dni" />
+            </div>
+            <div class="col-md-6">
+              <label for="correo" class="form-label">Correo</label>
+              <input type="email" id="correo" class="form-control" formControlName="correo" />
+            </div>
+          </div>
+
+          <div class="row mb-3">
+            <div class="col-md-8">
+              <label for="direccion" class="form-label">Dirección</label>
+              <input type="text" id="direccion" class="form-control" formControlName="direccion" />
+            </div>
+            <div class="col-md-4">
+              <label for="cp" class="form-label">CP</label>
+              <input type="text" id="cp" class="form-control" formControlName="cp" />
+            </div>
+          </div>
+
+          <div class="row mb-3">
+            <div class="col-md-6">
+              <label for="ciudad" class="form-label">Ciudad</label>
+              <input type="text" id="ciudad" class="form-control" formControlName="ciudad" />
+            </div>
+            <div class="col-md-6">
+              <label for="movil" class="form-label">Móvil</label>
+              <input type="text" id="movil" class="form-control" formControlName="movil" />
+            </div>
+          </div>
+
+          <div class="row mb-3">
+            <div class="col-md-6">
+              <label for="fecha" class="form-label">Fecha</label>
+              <input type="date" id="fecha" class="form-control" formControlName="fecha" />
+            </div>
+            <div class="col-md-6">
+              <label for="firma" class="form-label">Firma</label>
+              <input type="text" id="firma" class="form-control" formControlName="firma" />
+            </div>
+          </div>
+
+         
+          <section class="mb-3">
+            <h4 class="border-bottom pb-2">Información solicitada bloque 1</h4>
+            <label for="bloque1" class="form-label">Información bloque 1</label>
+            <textarea id="bloque1" rows="3" class="form-control" formControlName="bloque1" placeholder="Escribe la información solicitada para el bloque 1" title="Información solicitada bloque 1"></textarea>
+          </section>
+
+          <section class="mb-3">
+            <h4 class="border-bottom pb-2">Información solicitada bloque 2</h4>
+            <label for="bloque2" class="form-label">Información bloque 2</label>
+            <textarea id="bloque2" rows="3" class="form-control" formControlName="bloque2" placeholder="Escribe la información solicitada para el bloque 2" title="Información solicitada bloque 2"></textarea>
+          </section>
+
+        
+          <div class="d-grid mb-4">
+            <button type="submit" class="btn btn-primary" [disabled]="admisionForm.invalid">Enviar</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

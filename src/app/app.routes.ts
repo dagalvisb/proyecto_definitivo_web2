@@ -43,11 +43,6 @@ export const routes: Routes = [
   },
 
   {
-    path: 'formulario',
-    loadComponent: () =>
-      import('./pages/admission/formulario-admitidos.component').then(m => m.FormularioAdmitidosComponent),
-  },
-  {
     path: '**',
     loadComponent: () =>
       import('./pages/not-found/not-found.component').then(m => m.NotFoundComponent),

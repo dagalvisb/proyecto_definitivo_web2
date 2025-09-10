@@ -8,7 +8,7 @@ import { CommonModule } from '@angular/common';
   imports: [CommonModule, ReactiveFormsModule],
   templateUrl: './admitidos.component.html'
 })
-export class AdmisionComponent {
+export class AdmitidosComponent {
   admisionForm: FormGroup;
 
   constructor(private fb: FormBuilder) {

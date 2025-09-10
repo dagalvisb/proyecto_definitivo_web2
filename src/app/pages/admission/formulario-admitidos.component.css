@@ -1,0 +1,87 @@
+.form-container {
+  max-width: 700px;
+  margin: 20px auto;
+  font-family: Arial, sans-serif;
+  color: #333;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+header h1 {
+  font-weight: bold;
+  font-size: 1.8em;
+  margin-bottom: 5px;
+}
+
+.grupo-ensigna {
+  background-color: #d9cfc5;
+  color: #000;
+  font-weight: bold;
+  padding: 3px 10px;
+  border-radius: 5px;
+  font-size: 0.9em;
+}
+
+.section-header {
+  background-color: #d9cfc5;
+  padding: 8px 15px;
+  margin-top: 25px;
+  margin-bottom: 10px;
+  font-weight: bold;
+  font-size: 1.1em;
+  border-radius: 3px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+  gap: 10px;
+}
+
+.form-row label {
+  width: 150px;
+  font-weight: 600;
+}
+
+.form-row input {
+  flex: 1;
+  padding: 6px 8px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  font-size: 1em;
+}
+
+textarea.info-block {
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  padding: 8px;
+  font-size: 1em;
+  resize: vertical;
+  margin-bottom: 15px;
+}
+
+footer {
+  margin-top: 30px;
+  border-top: 1px solid #ccc;
+  padding-top: 15px;
+  font-size: 0.9em;
+  color: #555;
+  display: flex;
+  justify-content: space-around;
+}
+
+footer .contact-info span {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
